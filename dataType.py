@@ -43,3 +43,15 @@ print(type([1,2,3,4]))
 print(type((1,2,3,4)))
 print(type({"name":"Harshit","age":22}))
 print(type({1,2,3,4}))
+
+
+# === Variables === 
+#  A variables is just like a container which is used to store the data or value.
+#  In Python, we don't need to declare the variable with a specific data type, it will automatically detect the data type of the variable based on the value assigned to it.
+
+# so basically other language like c , c++ , java need to declare the data type of variable
+# eg :- int name = "Harshit" 
+
+# in python we can directly assign the value to the variable without need data type declare
+name = "Harshit"
+print(name)
