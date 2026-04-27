@@ -18,3 +18,10 @@ print(True)
 
 # it take multiple values and print them with space
 print("Harshit",7.7,True)
+
+# separator 
+print("Garvit",7.7,True,sep="*")
+
+# end='\n' this used in end of the print statement
+print("Hello")
+print("world")
