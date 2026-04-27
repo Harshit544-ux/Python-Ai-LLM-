@@ -32,5 +32,7 @@ dict = {"name":"Harshit","age":22,"city":"Hyderabad"}
 print(dict)
 
 
-
+# sets
+set = {1,2,3,4,5,}
+print(set)
 
