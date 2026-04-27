@@ -25,3 +25,6 @@ print("Garvit",7.7,True,sep="*")
 # end='\n' this used in end of the print statement
 print("Hello")
 print("world")
+
+print("hello",end="-")
+print("coder")
