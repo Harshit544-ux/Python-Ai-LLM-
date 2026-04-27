@@ -55,3 +55,41 @@ print(type({1,2,3,4}))
 # in python we can directly assign the value to the variable without need data type declare
 name = "Harshit"
 print(name)
+
+a = 5
+b = 6
+c = a+b
+print(c)
+
+
+# Dynamic typing - is it a way in which , we don't tell a data type of a variable
+a = 5
+
+# Static typing - is it a way in which , we need to tell a data type of a variable
+# int a = 5
+
+
+# Dynamic binding - (python)
+a = 5 
+print(a)
+a = "Harshit"
+print(a)
+
+# Static binding - (c,c++)
+# int a = 5;
+# a = "Harshit"; // error because we can't change the data type of variable in static binding language
+
+
+# === Traditional way ===
+a = 5 
+b = 6
+c = 8 
+print (a,b,c)
+
+# Another way to write the variable
+a,b,c = 5,6,8
+print(a,b,c)
+ 
+#  if you want to assign the same value to multiple variables
+a = b = c = 5
+print(a,b,c)
