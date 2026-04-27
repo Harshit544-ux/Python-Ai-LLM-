@@ -36,3 +36,10 @@ print(dict)
 set = {1,2,3,4,5,}
 print(set)
 
+
+# type() - is a function which are used to find the data type of the variable or value
+print(type(4))
+print(type([1,2,3,4]))
+print(type((1,2,3,4)))
+print(type({"name":"Harshit","age":22}))
+print(type({1,2,3,4}))
