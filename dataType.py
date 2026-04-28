@@ -93,3 +93,20 @@ print(a,b,c)
 #  if you want to assign the same value to multiple variables
 a = b = c = 5
 print(a,b,c)
+
+
+# keywords - in python they are 32 keywords 
+# keywords - eg :- True . False , if , else , elif , for , while , break , continue , pass , def , return , import , from , as , class , try , except , finally , raise , with , lambda , nonlocal , global , assert, yield, del, in, is, not, or, and etc
+# Basically keywords are understand by the python  interpreter 
+
+
+# Identifiers - is the name which we give to the variable , function , class etc
+# Rules for naming identifiers in python
+# 1) You can't start with a digit
+#  eg :- 1name = "Harshit" // it throw an error
+# 2) You can use special characters -> _ (underscore)
+# eg :- _name = "Harshit" // it is valid
+_= "Harshit"
+print(_)
+# 3) Identifiers are not be keywords
+# eg :- True = "Harshit" // it throw an error because True is a keyword

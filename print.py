@@ -28,3 +28,6 @@ print("world")
 
 print("hello",end="-")
 print("coder")
+
+# Python is a case sensitive language
+# Python is a interpreted language
