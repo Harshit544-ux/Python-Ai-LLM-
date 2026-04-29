@@ -35,3 +35,12 @@ print( 5 <= 3) #less than or equal to
 print( 5 == 3) #equal to
 
 print( 5 != 3) #not equal to
+
+
+# ===== Logical Operators ====== 
+#  and , or , not
+print( 1 and 0)
+
+print(1 or 0)
+
+print(not 1) #it returns the true and false
