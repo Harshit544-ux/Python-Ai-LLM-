@@ -54,3 +54,11 @@ print(5 ^ 3) #bitwise xor
 print(~5)    #bitwise not
 print(5 << 1) #left shift
 print(5 >> 1) #right shift
+
+
+# ===== Assignment Operators ======
+x = 5 
+
+# x = x + 3
+x += 3 
+print(x)
