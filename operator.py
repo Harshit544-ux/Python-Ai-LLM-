@@ -62,3 +62,15 @@ x = 5
 # x = x + 3
 x += 3 
 print(x)
+
+
+# ===== Membership Operators ======
+# in operator :- it checks if a value is present in a sequence (like list, tuple, string) and returns True if it is present, otherwise it returns False
+print( 'D' in 'Delhi') # it return True 
+
+print ( 3 in [1,2,3,4,5,6]) # it return True
+
+# not in operator :- it checks if a value is not present in a sequence and returns True if it is not present, otherwise it returns False
+print( 'D' not in 'Delhi') # it return False
+
+print( 4 not in [1,2,3,4,5,6]) # it return False
