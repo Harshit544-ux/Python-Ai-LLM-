@@ -74,3 +74,11 @@ print ( 3 in [1,2,3,4,5,6]) # it return True
 print( 'D' not in 'Delhi') # it return False
 
 print( 4 not in [1,2,3,4,5,6]) # it return False
+
+
+# WAP to find the sum of three numbers entered by the user
+a = int(input("Enter first number :")) 
+b = int(input("Enter second number :"))
+c = int(input("Enter third number :"))
+d = a + b + c
+print("The sum of three numbers is :" ,d)
