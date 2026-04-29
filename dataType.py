@@ -146,3 +146,20 @@ print(type(a2))
 a3 = 4
 print(float(a3))
 print(type(a3))
+
+
+# different way to write the string in python
+string = "This is a Python"    # double quotes
+string1 = 'This is a Python'   # single quotes
+multiline_string = """This is a Python""" # triple quotes
+char = "A"  # single character string 
+unicode = u"नमस्ते" # unicode string
+raw_string = r"raw \n string" # raw string
+
+# print the string
+print(string)
+print(string1)
+print(multiline_string)
+print(char)
+print(unicode)
+print(raw_string)
