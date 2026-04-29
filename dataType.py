@@ -103,10 +103,46 @@ print(a,b,c)
 # Identifiers - is the name which we give to the variable , function , class etc
 # Rules for naming identifiers in python
 # 1) You can't start with a digit
-#  eg :- 1name = "Harshit" // it throw an error
+# eg :- 1name = "Harshit" // it throw an error
 # 2) You can use special characters -> _ (underscore)
 # eg :- _name = "Harshit" // it is valid
 _= "Harshit"
 print(_)
 # 3) Identifiers are not be keywords
 # eg :- True = "Harshit" // it throw an error because True is a keyword
+
+
+# User input
+# static vs dynamic input
+# static -  which means we does not need take any input from the user . eg :- a=5
+# dynamic - which means we need to take input from the user . eg :- a = input("Enter a number: ")
+# input() function is used to take input from the user and it
+# eg: - input("Enter a email")
+
+# WAP to take a input and two numbers
+a = input("Enter a number1 :")
+b = input ("Enter a number2 :")
+print(type(a),type(b))
+c = int(a) + int(b)
+print(c)
+
+
+# Implicit and Explicit type conversion
+# Implicit type conversion - is it a way in which python automatically convert the data type of the variable based on the value assigned to it
+# Explicit type conversion - is it a way in which we manually convert the data type of the variable using built-in functions like int(), float(), str() etc
+
+# Explicit type conversion
+# str -> int
+a1 = '5'
+print(int(a1))
+print(type(a1))
+
+# int -> str
+a2 = 5
+print(str(a2))
+print(type(a2))
+
+# int -> float
+a3 = 4
+print(float(a3))
+print(type(a3))
