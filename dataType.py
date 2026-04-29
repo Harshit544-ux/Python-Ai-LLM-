@@ -163,3 +163,18 @@ print(multiline_string)
 print(char)
 print(unicode)
 print(raw_string)
+
+
+# Literals :- in python, literals are the data which we directly assign to the variable or use in the program.
+# eg :- a = 5 , b = "Hello" , c = 3.14 , d = True etc
+
+# In python :- True and False , True means 1 and False means 0
+a3 = True + 1
+b3 = False + 1
+print(a3) # it will print 2 because True is 1 and 1 + 1 = 2
+print(b3) # it will print 1 because False is 0 and 0 + 1 = 1
+
+# None
+a4 = None
+print(a4) # it will print None because None is a special constant in python which represents the absence of a value or a null value
+print(type(a4)) # it will print <class 'NoneType'> because None is of
