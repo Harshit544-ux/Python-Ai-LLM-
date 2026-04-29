@@ -44,3 +44,13 @@ print( 1 and 0)
 print(1 or 0)
 
 print(not 1) #it returns the true and false
+
+
+# ===== Bitwise Operators ======
+
+print(5 & 3) #bitwise and
+print(5 | 3) #bitwise or
+print(5 ^ 3) #bitwise xor
+print(~5)    #bitwise not
+print(5 << 1) #left shift
+print(5 >> 1) #right shift
