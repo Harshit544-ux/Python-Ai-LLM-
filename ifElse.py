@@ -48,3 +48,20 @@ elif b < a and b < c:
     print("Minimum number is : " , b)
 else :
     print("Minimum number is  :" ,c)
+
+
+# menu driven program
+fnum = int(input("Enter first number :"))
+snum = int(input("Enter second number :"))
+
+# take the input for operation
+op = input("Enter the operation you want to perform : + ,- ,*  =  ")
+
+if op == "+" :
+    print("the sum is :" , fnum + snum)
+elif op == "-":
+    print("the difference is :" , fnum - snum)
+elif op == "*":
+    print("the product is :" ,fnum * snum)
+else :
+    print("Invalid operation")
