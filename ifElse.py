@@ -67,22 +67,25 @@
 #     print("Invalid operation")
 
 
-# ===== Modules in python =====
-# 1 )  math module
-import math
-print(math.sqrt(16))
+# # ===== Modules in python =====
+# # 1 )  math module
+# import math
+# print(math.sqrt(16))
 
-# 2 ) random module
-import random
-print(random.randint(1,100))
+# # 2 ) random module
+# import random
+# print(random.randint(1,100))
 
-# 3 )  keywoords module
-import keyword
-print(keyword.kwlist)
+# # 3 )  keywoords module
+# import keyword
+# print(keyword.kwlist)
 
-# 4 ) datetime module 
-import datetime
-print(datetime.datetime.now())
+# # 4 ) datetime module 
+# import datetime
+# print(datetime.datetime.now())
 
-# if you want to know all the modules in python then you can use help function
-help('modules')
+# # if you want to know all the modules in python then you can use help function
+# help('modules')
+
+
+
