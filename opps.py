@@ -36,7 +36,7 @@ class Atm :
              self.change_pin()
         elif user_input == '3':
             # check balance
-            pass
+            self.check_balance()
         elif user_input == '4':
             # withdraw cash
                 pass
@@ -70,6 +70,15 @@ class Atm :
             print("Your old pin is incorrect")
             # call the menu function again to show the menu again
             self.menu()
+    
+    # check balance function
+    def check_balance(self):
+        user_pin=input("Enter your pin :")
+        if user_pin == self.pin:
+            print("Your balance is :" , self.balance)
+        else:
+            print("Your pin is incorrect")
+
 
  
 
