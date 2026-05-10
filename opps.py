@@ -39,7 +39,7 @@ class Atm :
             self.check_balance()
         elif user_input == '4':
             # withdraw cash
-                pass
+            self.withdraw_cash()
         else:
             exit()
     
@@ -78,6 +78,21 @@ class Atm :
             print("Your balance is :" , self.balance)
         else:
             print("Your pin is incorrect")
+    
+    def withdraw_cash(self):
+        user_pin = input("Enter your pin :")
+        if user_pin == self.pin:
+            amount = int(input("Enter the amount you want to withdraw :"))
+            if amount > self.balance:
+                print("Insufficient balance")
+            else:
+                self.balance -= amount
+                print("Please collect your cash")
+                print("Your remaining balance is :" , self.balance)
+
+        else:
+            print("Your pin is incorrect")
+            self.menu()
 
 
  
