@@ -101,3 +101,11 @@ class Atm :
 # creating an object of the class
 obj =Atm()
 # print(type(obj))
+
+
+# class Student:
+#     def __init__(self):
+#         print("database connected successfully")
+
+
+# obj1 = Student()

@@ -8,6 +8,8 @@ This repository contains a collection of Python programming examples and tutoria
 - `operator.py`: Explains various operators in Python: arithmetic, relational, logical, bitwise, assignment, and membership operators. Includes examples and a small program to sum three numbers.
 - `print.py`: Demonstrates the usage of the `print()` function, including printing different data types, separators, and end parameters.
 - `ifElse.py`: Contains commented-out examples of conditional statements (if, elif, else), including a login program, finding the minimum of three numbers, a menu-driven program, and importing Python modules (math, random, keyword, datetime). The code is commented for educational purposes.
+- `function.py`: A placeholder for Python function examples (currently empty).
+- `opps.py`: Demonstrates Object-Oriented Programming (OOP) concepts like classes, objects, and the `__init__` constructor using an ATM simulation.
 
 ## How to Use
 
@@ -30,7 +32,6 @@ The goal of this repository is to provide clear, concise examples for learning P
 - Uncomment and activate the code examples in `ifElse.py` to make them executable
 - Add more advanced Python topics such as:
   - File handling and I/O operations
-  - Object-oriented programming (classes and objects)
   - Error handling and exceptions
   - Working with libraries (NumPy, Pandas, Matplotlib)
   - Web scraping with BeautifulSoup and Requests
