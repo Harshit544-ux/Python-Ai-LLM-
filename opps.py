@@ -134,4 +134,19 @@ class Car:
 c= Car("BMW",5000)
 c.details()
 
+
+# Multiple Objects (same class, different data)
+class Students:
+    def __init__(self,name):
+        self.name = name
+
+
+s1=Students("Harshit")
+s2=Students("Garvit")
+s3=Students("Arpit")
+
+print(s1.name)
+print(s2.name)
+print(s3.name)
+
 # How to object access to the attributes and methods
