@@ -149,4 +149,24 @@ print(s1.name)
 print(s2.name)
 print(s3.name)
 
+
+# Enacpsulation : binding data and functions together in a single unit is called encapsulation
+class Bank_account:
+    # constructor
+    def __init__(self,balance):
+        # private variable
+        self.__balance=balance 
+    
+    def deposit(self,amount):
+         self.__balance += amount
+    
+    def get_amount(self):
+        return self.__balance
+
+
+user=Bank_account(1000)
+user.deposit(500)
+print("the total balance is :", user.get_amount())
+# print(user.__balance)  // this will give an error because __balance is a private variable
+
 # How to object access to the attributes and methods
