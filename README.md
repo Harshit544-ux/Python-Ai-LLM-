@@ -9,7 +9,7 @@ This repository contains a collection of Python programming examples and tutoria
 - `print.py`: Demonstrates the usage of the `print()` function, including printing different data types, separators, and end parameters.
 - `ifElse.py`: Contains commented-out examples of conditional statements (if, elif, else), including a login program, finding the minimum of three numbers, a menu-driven program, and importing Python modules (math, random, keyword, datetime). The code is commented for educational purposes.
 - `function.py`: A placeholder for Python function examples (currently empty).
-- `opps.py`: Demonstrates Object-Oriented Programming (OOP) concepts like classes, objects, and the `__init__` constructor using an ATM simulation.
+- `opps.py`: Demonstrates Object-Oriented Programming (OOP) concepts like classes, objects, parameterized constructors, multiple objects with unique data, and encapsulation using private variables. Includes an ATM simulation example.
 
 ## How to Use
 
