@@ -15,7 +15,7 @@ class Atm :
     def __init__(self):
         self.pin=''
         self.balance=0
-        self.menu()
+        # self.menu()
     
     # menu function
     def menu(self):
@@ -109,3 +109,19 @@ obj =Atm()
 
 
 # obj1 = Student()
+
+
+
+class Python:
+    def __init__(self,name):
+        self.name=name
+    
+    def printName(self):
+        print("Hi I m " , self.name)
+
+p = Python("Harshit")
+p.printName()
+
+
+
+# How to object access to the attributes and methods
