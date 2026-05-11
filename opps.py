@@ -122,6 +122,16 @@ class Python:
 p = Python("Harshit")
 p.printName()
 
-
+# parameterized constructor : constructor which takes parameters is called parameterized constructor
+class Car:
+    def __init__(self,name, price):
+        self.name=name
+        self.price=price
+    
+    def details(self):
+        print("the car name is ",self.name ,"car price is ",self.price)
+        
+c= Car("BMW",5000)
+c.details()
 
 # How to object access to the attributes and methods
