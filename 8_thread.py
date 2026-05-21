@@ -26,20 +26,41 @@
 
 # Implementation :- 
 
-# import Thread class
-from threading import Thread ,current_thread
+# # import Thread class
+# from threading import Thread ,current_thread
 
-# Create a function containing code to be executed parallelly
-def display(n,msg):
-    print("t1 thread : " , current_thread().name)
-    for i in range(n):
-        print(msg)
+# # Create a function containing code to be executed parallelly
+# def display(n,msg):
+#     print("t1 thread : " , current_thread().name)
+#     for i in range(n):
+#         print(msg)
     
-# create a new Thread Here
-t1=Thread(target=display,args=(5,'Hello World'))
-# start the new Thread
+# # create a new Thread Here
+# t1=Thread(target=display,args=(5,'Hello World'))
+# # start the new Thread
+# t1.start()
+
+# # this run by main thread
+# for i in range(5):
+#     print("Main Thread")
+
+
+# if you want to create a Thread in Class
+
+from threading import Thread
+
+class Example:
+    def display(self,n):
+        for _ in range(n):
+            print("Hello World")
+
+# instance of an object
+e1=Example()
+# create the thread and access the display method
+t1=Thread(target= e1.display,args=(5,))
+# start the thread
 t1.start()
 
-# this run by main thread
+# main thread
 for i in range(5):
     print("Main Thread")
