@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 # OpenRouter client
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -26,7 +27,7 @@ vector_store = QdrantVectorStore.from_existing_collection(
 )
 
 # User query
-user_query = input("👱‍♂️ Ask something: ")
+user_query = input("😀 Ask something: ")
 
 # Similarity search
 search_results = vector_store.similarity_search(query=user_query, k=4)
