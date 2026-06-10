@@ -1,67 +1,54 @@
-import os
-from langchain_community.document_loaders import PyPDFLoader
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_qdrant import QdrantVectorStore
-from openai import OpenAI
-from dotenv import load_dotenv
 
+import os
+from openai import OpenAI
+from dotenv import load_dotenv # Used to load environment variables from a .env file
+
+# Load environment variables from LLM/.env
 load_dotenv()
 
-# OpenRouter client
+# Initialize the OpenAI client (configured for OpenRouter)
 client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
+  base_url="https://openrouter.ai/api/v1",
+  api_key=os.getenv("OPENROUTER_API_KEY"), # Fetch API key from environment
 )
 
-# Embeddings
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+# few shot prompting : Direct giving instructions to the model and give some example
+SYSTEM_PROMPT = """
+    You'r a Ai Assistant , Your name is Harshit , which are expertise in solving problem of user query in chain of thought
+    You work on START -> PLAN -> OUTPUT steps
+    You need to PLAN first what needs to be done . The PLAN can be mutliple steps
+    Once you have the PLAN is done , finally you will give the OUTPUT as answer of user query
 
-# Load existing Qdrant collection
-vector_store = QdrantVectorStore.from_existing_collection(
-    url="http://localhost:6333",
-    collection_name="learning_rag",
-    embedding=embeddings
-)
+   Rules :
+   - Strictly follow the give JSON output format
+   - Only run one step at a time
+   - The sequence of steps is START (which user give input) , PLAN (that can be multiple times) 
+   and finally OUTPUT (which is displayed to user).
 
-# User query
-user_query = input("👱‍♂️ Ask something: ")
+   JSON Output Format :
+   {"step":"START"|"PLAN"|"OUTPUT","content":"string"}
+   
+   Example :
+   START: Hi , can you solve the math problem 2 + 3 * 3 for me ?
+   PLAN : {"step":"PLAN","content":"Seems like user is interested in math problems"}
+   PLAN : {"step":"PLAN","content":"looking at the problem we used BODMAS rule to solve the problem"}
+   PLAN : {"step":"PLAN","content":"first we multiply the 3 * 5"}
+   PLAN : {"step":"PLAN","content":"Now the equation is 2 + 1.5"}
+   PLAN : {"step":"PLAN","content":"Now finally lets perform the add 3.5"}
+   OUTPUT : {"step":"OUTPUT","content":"The answer to the math problem 2 + 3 * 3 is 11"}
 
-# Similarity search
-search_results = vector_store.similarity_search(query=user_query, k=4)
-
-# Build context from chunks
-context = "\n\n".join([
-    f"Page {doc.metadata.get('page', 'N/A')}:\n{doc.page_content}"
-    for doc in search_results
-])
-
-SYSTEM_PROMPT = f"""
-You are a helpful assistant who answers questions based on the following context 
-retrieved from a PDF, along with page numbers.
-
-Only answer based on the context below. If the answer is not in the context, 
-say "I couldn't find this in the document." Also mention the page number 
-where the user can read more.
-
-Context:
-{context}
 """
 
-# Call DeepSeek via OpenRouter
+# Call the chat completion API
 response = client.chat.completions.create(
-    model="deepseek/deepseek-v4-flash",
-    messages=[
-        {
-            "role": "system",
-            "content": SYSTEM_PROMPT
-        },
-        {
-            "role": "user",
-            "content": user_query
-        }
-    ],
+  model="deepseek/deepseek-v4-flash",
+  response_format={"type":"json_object"},
+  messages=[
+        {"role" : "system" , "content" : SYSTEM_PROMPT},
+        {"role" : "user" , "content" :"Hi write a code in javascript which add n numbers?"}
+        ],
+
 )
 
-print("🤖\nAnswer:", response.choices[0].message.content)
+# Print the model's response content
+print(response.choices[0].message.content)
