@@ -120,7 +120,7 @@ if "message" not in st.session_state:
         SystemMessage(content=Prompt)
     ]
 
-USER_AVATAR = "🙋"
+USER_AVATAR = "😀"
 BOT_AVATAR = "🤖"
 
 # ---------- Sidebar ----------
@@ -128,7 +128,7 @@ with st.sidebar:
     st.header("⚙️ Options")
     if st.button("🗑️ Clear Chat", use_container_width=True):
         st.session_state.message = [
-            SystemMessage(content=PERSONA)
+            SystemMessage(content=Prompt)
         ]
         st.rerun()
     st.caption("Type `exit`, `quit`, or `byt` to end the chat.")
