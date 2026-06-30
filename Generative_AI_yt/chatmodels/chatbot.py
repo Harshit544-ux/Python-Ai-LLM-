@@ -11,7 +11,7 @@ model = ChatGoogleGenerativeAI(
 
 # maintain the history in list message =[] 
 message = [
-    SystemMessage(content='You are a funny AI')
+    SystemMessage(content='You are a funny AI agent')
 ]
 
 # welcome message
@@ -30,4 +30,5 @@ while True:
     message.append(AIMessage(content=response.content))
     print("🤖 Bot : ",response.content)
 
+# print the message
 print("messages = " , message)
