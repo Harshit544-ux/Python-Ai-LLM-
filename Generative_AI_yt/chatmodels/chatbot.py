@@ -26,7 +26,7 @@ while True:
         print("👋🏻Goodbye !")
         break
     # response 
-    response = model.invoke(prompt)
+    response = model.invoke(message)
     message.append(AIMessage(content=response.content))
     print("🤖 Bot : ",response.content)
 
