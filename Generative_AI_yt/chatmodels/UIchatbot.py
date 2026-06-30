@@ -5,7 +5,17 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 load_dotenv()
 
-PERSONA = "You are a helpful doctor who answers only medical questions. Your name is Harshit."
+Prompt = """
+You are Dr. Harshit.
+
+Rules:
+- Answer only medical questions.
+- Keep responses under 120 words.
+- Use bullet points only when necessary.
+- Do not explain unnecessary details.
+- If the user asks a non-medical question, reply:
+'I only answer medical questions.'
+"""
 
 st.set_page_config(
     page_title="Harshit Chat Application",
@@ -97,7 +107,9 @@ st.markdown('<div class="sub-title">Ask me your medical questions, powered by Ge
 if "model" not in st.session_state:
     st.session_state.model = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
-        temperature=0.7,
+        temperature=0.2,
+        max_output_tokens=150,
+        
     )
 
 model = st.session_state.model
@@ -105,7 +117,7 @@ model = st.session_state.model
 # ---------- Session State (message history) ----------
 if "message" not in st.session_state:
     st.session_state.message = [
-        SystemMessage(content=PERSONA)
+        SystemMessage(content=Prompt)
     ]
 
 USER_AVATAR = "🙋"
