@@ -16,7 +16,7 @@ model = ChatGoogleGenerativeAI(
 # -------------------- PAGE CONFIG --------------------
 
 st.set_page_config(
-    page_title="Harshit Chat Application",
+    page_title="Mood based Ai chatbot",
     page_icon="🤖",
     layout="centered",
 )
@@ -85,7 +85,7 @@ st.markdown(
 
 # -------------------- HEADER --------------------
 
-st.markdown('<div class="main-title">🤖 Harshit Chat Application</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">🤖 Mood based AI chatbot</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">Pick a personality and start chatting with Gemini</div>', unsafe_allow_html=True)
 
 # -------------------- SESSION STATE --------------------
